@@ -7,8 +7,8 @@
 // const guess = document.querySelector('.guess').value
 let score = 20;
 let highscore = 0;
-
 let number = Math.trunc(Math.random() * 20) + 1;
+
 function textMessage(message) {
   document.querySelector('.message').textContent = message;
 }
@@ -41,16 +41,16 @@ const button = document
       }
     }
   });
-const restButton = document
-  .querySelector('.again')
-  .addEventListener('click', function () {
-    score = 20;
-    number = Math.trunc(Math.random() * 20) + 1;
-    document.querySelector('.number').textContent = '?';
-    textMessage('Start guessing...');
-    document.querySelector('.score').textContent = score;
-    document.querySelector('.guess').value = null;
-    document.querySelector('body').style.backgroundColor = '#222';
-    document.querySelector('.number').style.width = '15rem';
-    document.querySelector('.guess').disabled = false;
-  });
+document.querySelector('.again').addEventListener('click', function () {
+  console.log('TESTING');
+  score = 20;
+  number = Math.trunc(Math.random() * 20) + 1;
+  textMessage('Start guessing...');
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = null;
+
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+  document.querySelector('.guess').disabled = false;
+})
